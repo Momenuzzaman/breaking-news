@@ -1,10 +1,11 @@
 
 import './App.css';
-
+import  News from './Components/News/News.js';
 function App() {
   return (
     <div >
       <h2>React Bootstrap</h2>
+      <News></News>
     </div>
   );
 }
