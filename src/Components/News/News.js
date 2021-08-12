@@ -1,16 +1,18 @@
 import React from 'react';
 import {Button,Card} from 'react-bootstrap';
 
-const News = () => {
+const News = ({article}) => {
+   console.log(article);
+        
     return (
         <Card>
-        <Card.Header>Featured</Card.Header>
+        <Card.Header>{article?.author}</Card.Header>
         <Card.Body>
-          <Card.Title>Special title treatment</Card.Title>
-          <Card.Text>
-            With supporting text below as a natural lead-in to additional content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Card.Title>{article?.title}</Card.Title>
+          <img width="100px" height="100px" src= {article?.urlToImage}></img>
+          <Button variant="primary">
+            <a href = {article?.url} >Go somewhere</a>
+          </Button>
         </Card.Body>
       </Card> 
     );
